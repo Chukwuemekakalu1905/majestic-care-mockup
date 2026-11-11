@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Mockup site for Majestic Care LLC, a licensed Arizona Behavioral Health Residential Facility in Tempe and Gilbert. Placeholder content, not official.">
+<title>Majestic Care LLC — Home-like Residential Care for Adults</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B2A3D'/%3E%3Cpath d='M8 18.5 L16 11 l8 7.5 V24 a1 1 0 0 1-1 1 h-5 v-5 h-4 v5 H9 a1 1 0 0 1-1-1z' fill='%23C4A574'/%3E%3C/svg%3E">
+<style>
+:root{
+  --navy:#0B2A3D;
+  --navy-2:#12384E;
+  --navy-3:#1A4A63;
+  --teal:#1B6B6A;
+  --teal-2:#2A8A88;
+  --teal-soft:#E7F3F2;
+  --sand:#F6F1EA;
+  --sand-2:#EDE6DB;
+  --sand-3:#D9CFC0;
+  --gold:#C4A574;
+  --gold-2:#A88850;
+  --gold-soft:#F3E8D4;
+  --ink:#1C2830;
+  --muted:#5A6A72;
+  --white:#FFFcf8;
+  --card:#FFFFFF;
+  --line:rgba(11,42,61,.10);
+  --radius:20px;
+  --shadow:0 14px 40px rgba(11,42,61,.08);
+  --shadow-lg:0 24px 60px rgba(11,42,61,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Source Sans 3',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--sand);
+  line-height:1.6;
+  font-size:1.05rem;
+}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.15;font-weight:600}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+.skip{
+  position:absolute;left:-999px;top:0;background:var(--gold);color:var(--navy);
+  padding:8px 16px;z-index:100;border-radius:0 0 8px 0;
+}
+.skip:focus{left:0}
+
+/* Crisis */
+.crisis{
+  background:var(--navy);
+  color:#E8E0D4;
+  font-size:.84rem;
+  letter-spacing:.01em;
+}
+.crisis .wrap{display:flex;gap:10px 18px;align-items:center;justify-content:center;flex-wrap:wrap;padding:9px 0;text-align:center}
+.crisis a{color:var(--gold);font-weight:650;text-decoration:none;border-bottom:1px solid rgba(196,165,116,.45)}
+.crisis a:hover{color:#F3E8D4}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,241,234,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.mark{
+  width:44px;height:44px;border-radius:12px;flex:none;
+  background:linear-gradient(160deg,var(--navy-2),var(--navy));
+  display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(196,165,116,.35);
+}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text strong{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.28rem;font-weight:600;color:var(--navy);letter-spacing:.01em}
+.logo-text span{font-size:.72rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.menu{display:flex;align-items:center;gap:4px 22px}
+.menu a{text-decoration:none;color:var(--navy-2);font-weight:550;font-size:.95rem}
+.menu a:hover{color:var(--teal)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:0;border-radius:999px;padding:11px 20px;font-weight:650;
+  text-decoration:none;cursor:pointer;transition:transform .15s ease, background .15s ease, box-shadow .15s ease;
+  white-space:nowrap;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,.menu a:focus-visible,.crisis a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--teal);outline-offset:3px;
+}
+.btn-call{background:var(--teal);color:#fff;box-shadow:0 8px 18px rgba(27,107,106,.25)}
+.btn-call:hover{background:#165958}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#d1b384}
+.btn-ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px rgba(255,252,248,.55)}
+.btn-ghost:hover{background:rgba(255,252,248,.08)}
+.header-actions{display:flex;align-items:center;gap:8px}
+.header-call{display:none}
+.nav-toggle{
+  display:none;width:44px;height:44px;border:0;border-radius:10px;
+  background:transparent;color:var(--navy);cursor:pointer;
+}
+.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{
+  display:block;width:20px;height:2px;background:currentColor;position:relative;margin:0 auto;border-radius:2px;
+}
+.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0}
+.nav-toggle span::before{top:-6px}
+.nav-toggle span::after{top:6px}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;color:var(--white);
+  background:
+    radial-gradient(900px 500px at 85% 10%, rgba(42,138,136,.35), transparent 60%),
+    radial-gradient(700px 420px at 10% 90%, rgba(196,165,116,.18), transparent 55%),
+    linear-gradient(165deg,var(--navy) 0%, var(--navy-2) 55%, #0E3D45 100%);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:radial-gradient(rgba(255,252,248,.12) 1px, transparent 1px);
+  background-size:22px 22px;
+}
+.hero-grid{
+  position:relative;display:grid;grid-template-columns:1.15fr .85fr;
+  gap:48px;align-items:center;padding:72px 0 120px;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(2.4rem,5vw,3.85rem);max-width:14ch;color:#FFFcf8}
+.hero .lede{margin:22px 0 32px;max-width:38ch;font-size:1.12rem;color:#E4D9C8;line-height:1.65}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{
+  justify-self:end;width:min(100%,420px);
+  filter:drop-shadow(0 24px 40px rgba(0,0,0,.28));
+}
+.wave{position:absolute;left:0;right:0;bottom:0;display:block;width:100%;height:80px;color:var(--sand);pointer-events:none}
+
+/* Trust strip */
+.trust{margin-top:-42px;position:relative;z-index:2}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:10px;border:1px solid rgba(255,255,255,.7);
+}
+.trust-item{padding:18px 16px;text-align:center}
+.trust-item + .trust-item{border-left:1px solid var(--line)}
+.trust-item b{display:block;color:var(--navy);font-size:.98rem;font-weight:700}
+.trust-item span{display:block;color:var(--muted);font-size:.82rem;margin-top:4px}
+
+/* Sections */
+section{padding:88px 0}
+.section-head{max-width:640px;margin-bottom:40px}
+.kicker{
+  color:var(--teal);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;
+}
+.kicker.placeholder-kicker{color:var(--gold-2)}
+h2{font-size:clamp(2rem,3.4vw,2.7rem);color:var(--navy)}
+.section-head p{margin-top:14px;color:var(--muted);font-size:1.08rem}
+.badge{
+  display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;
+  background:var(--gold-soft);color:var(--gold-2);font-size:.68rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;vertical-align:middle;
+}
+
+/* About */
+.about{background:var(--sand)}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+.about p{margin-bottom:16px;color:#3b4a52}
+.about p:last-child{margin-bottom:0}
+.panel{
+  background:var(--navy);color:#E8E0D4;border-radius:24px;padding:32px 28px;
+  box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
+}
+.panel::after{
+  content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;
+  background:radial-gradient(circle,rgba(42,138,136,.4),transparent 70%);
+}
+.panel h3{color:#FFFcf8;font-size:1.7rem;margin-bottom:8px}
+.panel .sub{color:var(--gold);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+.panel dl{position:relative;display:grid;gap:14px}
+.panel dt{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#B9C6CC;font-weight:650}
+.panel dd{font-size:1.05rem;color:#FFFcf8}
+.panel a{color:var(--gold);text-decoration:none}
+.panel a:hover{text-decoration:underline}
+
+/* Services */
+.services{background:linear-gradient(180deg,var(--sand-2),var(--sand))}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.card{
+  grid-column:span 2;background:var(--card);border-radius:18px;padding:26px 22px;
+  box-shadow:var(--shadow);border:1px solid rgba(11,42,61,.05);
+}
+.card:nth-child(4),.card:nth-child(5){grid-column:span 3}
+.icon{
+  width:48px;height:48px;border-radius:14px;background:var(--teal-soft);color:var(--teal);
+  display:grid;place-items:center;margin-bottom:16px;
+}
+.card h3{font-size:1.45rem;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted);font-size:.98rem}
+.note{
+  margin-top:22px;font-size:.88rem;color:var(--muted);background:var(--white);
+  border-left:3px solid var(--gold);padding:12px 16px;border-radius:0 12px 12px 0;
+}
+
+/* Quote */
+.quote-band{padding:0 0 20px}
+.quote{
+  background:var(--navy);color:#FFFcf8;border-radius:28px;padding:56px 48px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.quote::before{
+  content:"“";font-family:'Cormorant Garamond',Georgia,serif;font-size:8rem;line-height:1;
+  color:rgba(196,165,116,.28);position:absolute;top:8px;left:28px;
+}
+.quote blockquote{position:relative;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.55rem,3vw,2.15rem);font-style:italic;font-weight:500;max-width:22ch;margin:0 auto;line-height:1.3}
+.quote cite{display:block;margin-top:22px;font-style:normal;color:var(--gold);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+
+/* Locations */
+.locations{padding-top:68px}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.loc{
+  background:var(--card);border-radius:24px;padding:32px 28px;box-shadow:var(--shadow);
+  border:1px solid rgba(11,42,61,.05);display:flex;flex-direction:column;gap:8px;
+}
+.loc-label{color:var(--teal);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.loc h3{font-size:2rem;color:var(--navy)}
+.loc address{font-style:normal;color:var(--muted);margin:4px 0 8px}
+.loc .meta{color:var(--ink);font-weight:550}
+.loc-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn-outline{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--sand-3)}
+.btn-outline:hover{background:var(--sand)}
+.pin{width:42px;height:42px;border-radius:12px;background:var(--gold-soft);color:var(--gold-2);display:grid;place-items:center;margin-bottom:8px}
+
+/* Insurance */
+.insurance{padding-top:20px;padding-bottom:20px}
+.ins{
+  background:var(--teal-soft);border-radius:24px;padding:36px 32px;
+  display:grid;grid-template-columns:1.3fr auto;gap:24px;align-items:center;
+}
+.ins h2{font-size:2.1rem}
+.ins p{margin-top:10px;color:#35575a}
+
+/* Admissions */
+.admit{padding-top:72px}
+.admit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.warn{
+  background:#F8EFE0;border:1px solid #E6D3B0;color:#5C4A2E;
+  border-radius:14px;padding:12px 14px;font-size:.9rem;margin:16px 0 20px;
+}
+form{display:grid;gap:14px;background:var(--card);padding:28px;border-radius:24px;box-shadow:var(--shadow)}
+label{display:grid;gap:6px;font-size:.88rem;font-weight:650;color:var(--navy)}
+input,select,textarea{
+  width:100%;border:1px solid var(--sand-3);border-radius:12px;padding:12px 14px;
+  background:#FFFcf8;color:var(--ink);
+}
+textarea{min-height:120px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.thanks{
+  display:none;background:var(--card);padding:40px 32px;border-radius:24px;box-shadow:var(--shadow);text-align:center;
+}
+.thanks.show{display:block}
+.thanks h3{font-size:2rem;color:var(--navy);margin-bottom:10px}
+.thanks p{color:var(--muted)}
+.thanks a{color:var(--teal);font-weight:650}
+
+/* Footer */
+footer{background:var(--navy);color:#D5D0C6;padding:56px 0 28px;margin-top:20px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+footer h3{color:#FFFcf8;font-size:1.6rem;margin-bottom:10px}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
+.legal{padding-top:22px;font-size:.86rem;color:#A8B3B8;display:grid;gap:8px}
+.legal strong{color:#E8E0D4;font-weight:650}
+
+@media (max-width:860px){
+  .nav-toggle{display:grid;place-items:center}
+  .header-call{display:inline-flex;padding:9px 14px;font-size:.9rem}
+  .menu .btn-call{display:none}
+  .menu{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:rgba(246,241,234,.98);border-bottom:1px solid var(--line);
+    flex-direction:column;align-items:stretch;padding:12px 20px 20px;gap:6px;
+  }
+  header.open .menu{display:flex}
+  .menu a{padding:10px 4px}
+  .menu .btn-call{margin-top:6px;justify-content:center}
+  .hero-grid,.about-grid,.admit-grid,.ins,.foot-grid,.loc-grid{grid-template-columns:1fr}
+  .hero-grid{padding:52px 0 80px;gap:36px}
+  .hero-art{justify-self:center}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-item + .trust-item{border-left:0}
+  .trust-item:nth-child(odd){border-right:1px solid var(--line)}
+  .cards{grid-template-columns:1fr}
+  .card,.card:nth-child(4),.card:nth-child(5){grid-column:auto}
+  .quote{padding:44px 24px}
+  .row{grid-template-columns:1fr}
+  .ins{text-align:left}
+  section{padding:68px 0}
+}
+@media (max-width:520px){
+  .wrap{width:min(1120px,calc(100% - 28px))}
+  .trust-grid{grid-template-columns:1fr;padding:6px}
+  .trust-item:nth-child(odd){border-right:0}
+  .trust-item + .trust-item{border-top:1px solid var(--line)}
+  .hero-actions .btn,.loc-actions .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="crisis">
+  <div class="wrap">
+    <span>If this is an emergency, call <a href="tel:911">911</a>. For emotional distress or suicidal thoughts, call or text the 988 Suicide &amp; Crisis Lifeline at <a href="tel:988">988</a>.</span>
+  </div>
+</div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4.5 11.2 12 4.8l7.5 6.4V20a1 1 0 0 1-1 1h-4.2v-5.2h-4.6V21H5.5a1 1 0 0 1-1-1v-8.8Z" fill="#C4A574"/>
+          <path d="M9.8 12.2h4.4v2.4H9.8z" fill="#0B2A3D"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <strong>Majestic Care</strong>
+        <span>LLC</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-call header-call" href="tel:+14805721691">Call Tempe</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+        <span></span>
+      </button>
+    </div>
+    <nav class="menu" id="site-menu">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#locations">Locations</a>
+      <a href="#admissions">Admissions</a>
+      <a class="btn btn-call" href="tel:+14805721691">Call Tempe</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Tempe &amp; Gilbert, Arizona</p>
+        <h1 id="hero-title">Home-like residential care for adults</h1>
+        <p class="lede">Majestic Care LLC is a licensed Arizona Behavioral Health Residential Facility offering 24-hour residential treatment in a calm, supportive setting.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="tel:+14805721691">Call (480) 572-1691</a>
+          <a class="btn btn-ghost" href="#admissions">Request a referral</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="420" height="380" rx="32" fill="#0E3548"/>
+          <circle cx="330" cy="72" r="36" fill="#E8D7B0" opacity=".35"/>
+          <circle cx="330" cy="72" r="22" fill="#F3E8D4" opacity=".55"/>
+          <ellipse cx="86" cy="268" rx="70" ry="22" fill="#1B6B6A" opacity=".35"/>
+          <ellipse cx="318" cy="300" rx="90" ry="26" fill="#1B6B6A" opacity=".28"/>
+          <path d="M70 230 L210 118 L350 230 V322 H70 Z" fill="#163E52"/>
+          <path d="M96 230 L210 140 L324 230 V308 H96 Z" fill="#1C5166"/>
+          <path d="M70 230 L210 118 L350 230" stroke="#C4A574" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="186" y="250" width="48" height="58" rx="4" fill="#0B2A3D"/>
+          <rect x="124" y="214" width="42" height="42" rx="8" fill="#C4A574" opacity=".92"/>
+          <rect x="254" y="214" width="42" height="42" rx="8" fill="#C4A574" opacity=".92"/>
+          <rect x="189" y="176" width="42" height="32" rx="8" fill="#E7F3F2" opacity=".55"/>
+          <path d="M48 308 C90 280 140 300 168 308 H48 Z" fill="#2A8A88" opacity=".55"/>
+          <path d="M268 312 C310 282 360 298 388 312 H268 Z" fill="#2A8A88" opacity=".45"/>
+          <rect x="28" y="322" width="364" height="14" rx="7" fill="#C4A574" opacity=".25"/>
+        </svg>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 32c240 32 480-32 720-16s480 48 720 16v32H0z"/></svg>
+  </section>
+
+  <div class="wrap trust">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <b>Licensed BHRF</b>
+        <span>AZDHS license BH7668 (Tempe)</span>
+      </div>
+      <div class="trust-item">
+        <b>Adult residential care</b>
+        <span>Including depression and anxiety</span>
+      </div>
+      <div class="trust-item">
+        <b>Open 24 hours</b>
+        <span>From public place listing</span>
+      </div>
+      <div class="trust-item">
+        <b>Two East Valley homes</b>
+        <span>Tempe and Gilbert</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="section-head">
+          <p class="kicker">About the homes</p>
+          <h2>A quieter place to stabilize and rebuild routine</h2>
+        </div>
+        <p>Majestic Care LLC is a licensed Arizona Behavioral Health Residential Facility serving adults at two East Valley locations: Tempe and Gilbert. Care is residential and available around the clock.</p>
+        <p>The homes are overseen by administrator Stephen Iwuozo. Public listings describe support for adults, including those experiencing depression and anxiety, in a setting meant to feel closer to a residence than an institution.</p>
+        <p>One 2024 review called the facility “delightfully clean and well staffed” and “very responsive to client needs.”</p>
+      </div>
+      <aside class="panel">
+        <p class="sub">At a glance</p>
+        <h3>Majestic Care LLC</h3>
+        <dl>
+          <div>
+            <dt>Administrator</dt>
+            <dd>Stephen Iwuozo</dd>
+          </div>
+          <div>
+            <dt>License</dt>
+            <dd>AZDHS BH7668 (Tempe)</dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:majesticcarellc2021@gmail.com">majesticcarellc2021@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>Facebook</dt>
+            <dd><a href="https://facebook.com/100216406213263" rel="noopener noreferrer" target="_blank">Visit the page</a></dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker placeholder-kicker">Typical residential services <span class="badge">Placeholder</span></p>
+        <h2>Support around the clock, planned around each person</h2>
+        <p>The offerings below are generic examples of care often provided in an adult behavioral health residential facility. They are placeholders for this mockup and should be confirmed directly with Majestic Care.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 1.5"/><path d="M12 4V2M12 22v-2M4 12H2M22 12h-2"/></svg>
+          </div>
+          <h3>24/7 supervised residential care</h3>
+          <p>Staffed support through the day and night in a home-like residential setting.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 6h14M5 12h14M5 18h8"/><circle cx="17.5" cy="18" r="2.5"/></svg>
+          </div>
+          <h3>Individualized treatment plans</h3>
+          <p>Care planned around each adult’s needs, goals, and pace of recovery.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="3.5" width="16" height="17" rx="3"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <h3>Medication support</h3>
+          <p>Help staying consistent with prescribed medication as part of residential care.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 20V10l4-4 4 4v10"/><path d="M8 14h8"/></svg>
+          </div>
+          <h3>Life skills</h3>
+          <p>Practice with daily routines and practical skills that support more independent living.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><circle cx="12" cy="15.5" r="2.2"/><path d="M4.5 18.5c.8-2 2.5-3 3.8-3M19.5 18.5c-.8-2-2.5-3-3.8-3M9.4 17.4c.7-.6 1.6-1 2.6-1s1.9.4 2.6 1"/></svg>
+          </div>
+          <h3>Care coordination</h3>
+          <p>Coordination with families, referring providers, and community supports when appropriate.</p>
+        </article>
+      </div>
+      <p class="note">Placeholder note: service descriptions on this page are typical of an adult BHRF and are not an official program list for Majestic Care LLC.</p>
+    </div>
+  </section>
+
+  <div class="wrap quote-band">
+    <figure class="quote">
+      <blockquote>
+        Delightfully clean and well staffed facility. Very responsive to client needs.
+      </blockquote>
+      <cite>Review from 2024</cite>
+    </figure>
+  </div>
+
+  <section class="locations" id="locations">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Tempe &amp; Gilbert</p>
+        <h2>Two East Valley locations</h2>
+        <p>Call the home that is the better fit, or start with Tempe if you are unsure where to begin.</p>
+      </div>
+      <div class="loc-grid">
+        <article class="loc">
+          <div class="pin" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.8C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.2"/></svg>
+          </div>
+          <p class="loc-label">Tempe</p>
+          <h3>East Todd Drive</h3>
+          <address>1820 E Todd Dr<br>Tempe, AZ 85283</address>
+          <p class="meta">Phone: <a href="tel:+14805721691">(480) 572-1691</a></p>
+          <p class="meta">Open 24 hours</p>
+          <div class="loc-actions">
+            <a class="btn btn-call" href="tel:+14805721691">Call Tempe</a>
+            <a class="btn btn-outline" href="https://maps.google.com/?q=1820+E+Todd+Dr,+Tempe,+AZ+85283" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </div>
+        </article>
+        <article class="loc">
+          <div class="pin" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.8C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.2"/></svg>
+          </div>
+          <p class="loc-label">Gilbert</p>
+          <h3>East Clifton Avenue</h3>
+          <address>1080 E Clifton Ave<br>Gilbert, AZ 85295</address>
+          <p class="meta">Phone: <a href="tel:+14806569781">(480) 656-9781</a></p>
+          <p class="meta">Open 24 hours</p>
+          <div class="loc-actions">
+            <a class="btn btn-call" href="tel:+14806569781">Call Gilbert</a>
+            <a class="btn btn-outline" href="https://maps.google.com/?q=1080+E+Clifton+Ave,+Gilbert,+AZ+85295" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance" id="insurance">
+    <div class="wrap">
+      <div class="ins">
+        <div>
+          <p class="kicker">Insurance &amp; payment</p>
+          <h2>Contact us to verify coverage</h2>
+          <p>Payment options may include self-pay or private pay. That has been reported in public listings and is unverified. Please call to confirm current insurance and payment options.</p>
+        </div>
+        <a class="btn btn-call" href="#admissions">Ask about admissions</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="admit" id="admissions">
+    <div class="wrap admit-grid">
+      <div>
+        <p class="kicker">Admissions &amp; referrals</p>
+        <h2>Families and providers can start with a call</h2>
+        <p>If you are asking about a stay for yourself, a family member, or a client, reach the Tempe or Gilbert home by phone or email. The form here is only a mockup of how an inquiry might look.</p>
+        <p class="warn"><strong>Please do not enter health information.</strong> Do not include diagnoses, medications, treatment history, or other protected health details. This form does not send a message anywhere.</p>
+        <p>Tempe: <a href="tel:+14805721691">(480) 572-1691</a><br>
+           Gilbert: <a href="tel:+14806569781">(480) 656-9781</a><br>
+           Email: <a href="mailto:majesticcarellc2021@gmail.com">majesticcarellc2021@gmail.com</a></p>
+      </div>
+      <div>
+        <form id="referral-form" action="#" method="post" novalidate>
+          <div class="row">
+            <label>Name
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>Phone
+              <input type="tel" name="phone" autocomplete="tel" required>
+            </label>
+          </div>
+          <label>Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>I am a
+            <select name="role" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Person seeking care</option>
+              <option>Family member or friend</option>
+              <option>Referring provider or agency</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" placeholder="Do not include health information or protected details."></textarea>
+          </label>
+          <button class="btn btn-call" type="submit">Send inquiry</button>
+        </form>
+        <div class="thanks" id="thanks" role="status" aria-live="polite">
+          <h3>Thank you</h3>
+          <p>This is a mockup form, so your message was not sent. To reach Majestic Care, please call <a href="tel:+14805721691">(480) 572-1691</a> (Tempe) or <a href="tel:+14806569781">(480) 656-9781</a> (Gilbert), or email <a href="mailto:majesticcarellc2021@gmail.com">majesticcarellc2021@gmail.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Majestic Care LLC</h3>
+        <p>Licensed Arizona Behavioral Health Residential Facility for adults. AZDHS license BH7668 (Tempe).</p>
+      </div>
+      <div>
+        <p><strong style="color:#FFFcf8">Tempe</strong><br>
+        1820 E Todd Dr, Tempe, AZ 85283<br>
+        <a href="tel:+14805721691">(480) 572-1691</a></p>
+      </div>
+      <div>
+        <p><strong style="color:#FFFcf8">Gilbert</strong><br>
+        1080 E Clifton Ave, Gilbert, AZ 85295<br>
+        <a href="tel:+14806569781">(480) 656-9781</a></p>
+      </div>
+    </div>
+    <div class="legal">
+      <p>If this is an emergency, call <a href="tel:911">911</a>. For emotional distress or suicidal thoughts, call or text the 988 Suicide &amp; Crisis Lifeline at <a href="tel:988">988</a>.</p>
+      <p><a href="mailto:majesticcarellc2021@gmail.com">majesticcarellc2021@gmail.com</a> · <a href="https://facebook.com/100216406213263" rel="noopener noreferrer" target="_blank">Facebook</a></p>
+      <p><strong>Mockup by Continuum Technologies — placeholder content, not affiliated/official.</strong> Services and some descriptive copy are generic examples and are not a complete or official description of Majestic Care LLC’s programs. This page is a design mockup only and is not the facility’s official website.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header = document.querySelector('header');
+  var toggle = document.querySelector('.nav-toggle');
+  if (toggle){
+    toggle.addEventListener('click', function(){
+      var open = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('#site-menu a').forEach(function(link){
+      link.addEventListener('click', function(){
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  }
+  var form = document.getElementById('referral-form');
+  var thanks = document.getElementById('thanks');
+  if (form && thanks){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      form.style.display = 'none';
+      thanks.classList.add('show');
+    });
+  }
+})();
+</script>
+</body>
+</html>
